@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/crh-api-gateway/crh-api-gateway.iml" filepath="$PROJECT_DIR$/crh-api-gateway/crh-api-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crh-common-service/crh-common-service.iml" filepath="$PROJECT_DIR$/crh-common-service/crh-common-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crh-test-discover/crh-test-discover.iml" filepath="$PROJECT_DIR$/crh-test-discover/crh-test-discover.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crh-test-platform/crh-test-platform.iml" filepath="$PROJECT_DIR$/crh-test-platform/crh-test-platform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crh-token-api/crh-token-api.iml" filepath="$PROJECT_DIR$/crh-token-api/crh-token-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crh-token-service/crh-token-service.iml" filepath="$PROJECT_DIR$/crh-token-service/crh-token-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/springcloud-zuul-jwt.iml" filepath="$PROJECT_DIR$/.idea/springcloud-zuul-jwt.iml" />
+    </modules>
+  </component>
+</project>

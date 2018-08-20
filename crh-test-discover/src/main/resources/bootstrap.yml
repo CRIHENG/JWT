@@ -1,0 +1,9 @@
+server:
+ port: ${service.server.port:12138}
+
+eureka:
+ client:
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: ${eureka.serviceUrl:http://localhost:12138/eureka/}

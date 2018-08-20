@@ -1,0 +1,15 @@
+spring:
+ redis:
+  host: 127.0.0.1
+  port: 6379
+
+spring:
+  datasource:
+    platform: h2
+    schema: classpath:schema.sql
+    data: classpath:data.sql
+jwt:
+ accessToken: 6000000
+ refreshToken: 60000000
+ exp: 10
+ secret: 123456

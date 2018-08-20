@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="crh-api-gateway" />
+        <module name="crh-common-service" />
+        <module name="crh-test-discover" />
+        <module name="crh-token-api" />
+        <module name="crh-token-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="crh-api-gateway" target="1.8" />
+      <module name="crh-common-service" target="1.8" />
+      <module name="crh-test-discover" target="1.8" />
+      <module name="crh-test-platform" target="1.8" />
+      <module name="crh-token-api" target="1.8" />
+      <module name="crh-token-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
