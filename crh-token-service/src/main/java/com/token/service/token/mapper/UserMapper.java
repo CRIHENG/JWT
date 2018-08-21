@@ -8,4 +8,9 @@ public interface UserMapper {
 
     @SelectProvider(type = UserProvider.class,method = "findByUserName")
     User findByUserName(String userName);
+
+    @SelectProvider(type = UserProvider.class,method = "findByUserId")
+    User findByUserId(String userId);
+    @InsertProvider(type = UserProvider.class,method = "saveUser")
+    void  saveUser(User user);
 }

@@ -1,21 +1,30 @@
 package com.token.service.token.service;
 
+import com.token.service.token.mapper.UserMapper;
 import crh.token.api.entity.User;
 import crh.token.api.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestParam;
 
 public class UserServiceImpl implements UserService {
+
+    @Autowired
+    private UserMapper userMapper;
+
     @Override
-    public User findUserByUserName(String userName) {
-        return null;
+    public User findUserByUserName(@RequestParam("userName") String userName) {
+        User user = userMapper.findByUserName(userName);
+        return user;
     }
 
     @Override
-    public User findUserByUserId(String userId) {
-        return null;
+    public User findUserByUserId(@RequestParam("userId") String userId) {
+        User user = userMapper.findByUserId(userId);
+        return user;
     }
 
     @Override
     public void save(User user) {
-
+        userMapper.saveUser(user);
     }
 }

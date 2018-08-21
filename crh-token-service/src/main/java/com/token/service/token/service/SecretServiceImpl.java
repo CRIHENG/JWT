@@ -16,8 +16,7 @@ public class SecretServiceImpl implements SecretService {
 
     @Autowired
     private UserService userService;
-    @Autowired
-    private UserMapper userMapper;
+
     @Autowired
     private JWTConfig jwtConfig;
 
@@ -27,8 +26,9 @@ public class SecretServiceImpl implements SecretService {
         String secret = null;
         if (userId != null) {
             secret =userService.findUserByUserId(userId).getPassword();
+        }else {
+            secret=jwtConfig.getSecret();
         }
-
-        return null;
+        return secret;
     }
 }

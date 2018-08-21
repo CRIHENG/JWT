@@ -2,7 +2,7 @@ package com.common.service.util;
 
 public class ResponseBean {
     //http状态码
-    private  String code;
+    private  int code;
     //返回信息
     private  Object data;
     //返回数据
@@ -11,17 +11,17 @@ public class ResponseBean {
 
     }
 
-    public ResponseBean(String code, Object data, String msg) {
+    public ResponseBean(int code, Object data, String msg) {
         this.code = code;
         this.data = data;
         this.msg = msg;
     }
 
-    public String getCode() {
+    public int getCode() {
         return code;
     }
 
-    public void setCode(String code) {
+    public void setCode(int code) {
         this.code = code;
     }
 

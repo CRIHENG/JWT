@@ -1,11 +1,32 @@
 package com.token.service.token.service;
 
 import com.common.service.util.ResponseBean;
+import com.token.service.common.RedisUtil;
+import com.token.service.util.JWTUtil;
+import crh.token.api.service.SecretService;
 import crh.token.api.service.TokenService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+
 
 public class TokenServiceImpl implements TokenService {
+    @Autowired
+    private RedisTemplate<String, String> restTemplate;
+
+    @Autowired
+    private SecretService secretService;
+
+    @Autowired
+    private JWTUtil jwtUtil;
     @Override
     public ResponseBean checkToken(String token) {
-        return null;
+       String userId=JWTUtil.getUserId(token);
+       String secret=secretService.secret(userId);
+       String flag=JWTUtil.verify(token,userId,secret);
+       if (RedisUtil.get(restTemplate,token)==null){
+           return new ResponseBean(200,null,"RedisTokenExpired");
+       }else {
+           return new ResponseBean(200,null,flag);
+       }
     }
 }
