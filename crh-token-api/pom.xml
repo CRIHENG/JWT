@@ -5,6 +5,7 @@
         <artifactId>crh-test-platform</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
+    <groupId>crh.test</groupId>
     <artifactId>crh-token-api</artifactId>
     <name>crh-token-api</name>
     <dependencies>

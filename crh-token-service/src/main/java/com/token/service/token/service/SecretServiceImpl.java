@@ -1,6 +1,6 @@
 package com.token.service.token.service;
 
-import com.token.service.token.mapper.UserMapper;
+
 import com.token.service.util.JWTConfig;
 import crh.token.api.service.SecretService;
 import crh.token.api.service.UserService;

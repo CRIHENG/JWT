@@ -4,8 +4,14 @@ import com.token.service.token.mapper.UserMapper;
 import crh.token.api.entity.User;
 import crh.token.api.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
+@RestController
+@RefreshScope
+@RequestMapping("/token/user")
 public class UserServiceImpl implements UserService {
 
     @Autowired

@@ -6,9 +6,14 @@ import com.token.service.util.JWTUtil;
 import crh.token.api.service.SecretService;
 import crh.token.api.service.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-
+@RestController
+@RefreshScope
+@RequestMapping("/token/api")
 public class TokenServiceImpl implements TokenService {
     @Autowired
     private RedisTemplate<String, String> restTemplate;
