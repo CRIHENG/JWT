@@ -12,9 +12,6 @@ import org.springframework.stereotype.Service;
 public class SecretServiceImpl implements SecretService {
 
     @Autowired
-    private RedisTemplate<String, String> redisTemplate;
-
-    @Autowired
     private UserService userService;
 
     @Autowired
