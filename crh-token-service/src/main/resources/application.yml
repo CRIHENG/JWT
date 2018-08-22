@@ -11,5 +11,3 @@ jwt:
  refreshToken: 60000000
  exp: 10
  secret: 123456
-
-spring.datasource
