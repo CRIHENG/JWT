@@ -6,11 +6,11 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.auth0.jwt.interfaces.DecodedJWT;
-import crh.token.api.service.TokenService;
+import org.springframework.context.annotation.Configuration;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Date;
-
+@Configuration
 public class JWTUtil {
     /**
      * 校验token
